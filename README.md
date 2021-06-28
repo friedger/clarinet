@@ -171,6 +171,30 @@ evaluation on a blockchain. Use the following command:
 $ clarinet deploy --mocknet
 ```
 
+### Add required contracts
+
+If your contract contains contract calls to other contracts these can be added as a requirement
+
+```bash
+$ clarinet contract requirement ST2PABAF9FTAJYNFZH93XENAJ8FVY99RRM4DF2YCW.nft-trait
+```
+
+You can also manually add requirements in `Clarinet.toml` like this:
+```
+[project]
+name = "clarity-test"
+...
+[[project.requirements]]
+contract_id = "ST2PABAF9FTAJYNFZH93XENAJ8FVY99RRM4DF2YCW.nft-trait"
+
+[[project.requirements]]
+contract_id = "ST2PABAF9FTAJYNFZH93XENAJ8FVY99RRM4DF2YCW.sip-10-ft-standard"
+...
+``` 
+### Determine runtime costs
+
+You can 
+
 ## Contributing
 
 ### Prerequisites
